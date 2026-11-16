@@ -15,5 +15,13 @@ namespace LibraryApp
             return (currentYear - year) >= 100;
         }
 
+        public static string GetFineLevel(int daysOverdue)
+        {
+            if (daysOverdue <= 0) return "Нет";
+            if (daysOverdue <= 14) return "Низкий";
+            if (daysOverdue <= 30) return "Средний";
+            return "Высокий";
+        }
+
     }
 }
