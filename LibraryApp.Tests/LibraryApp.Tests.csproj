@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{335B340F-8827-45B0-BAB2-4DD55A3594DF}</ProjectGuid>
+    <ProjectGuid>{3F183DC3-EB4D-AE00-65E0-E50F3140EE15}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LibraryApp.Tests</RootNamespace>
@@ -49,13 +49,9 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="..\LibraryApp\LibraryRules.cs">
       <Link>LibraryRules.cs</Link>
     </Compile>
-=======
-    <Compile Include="LibraryRules.cs" />
->>>>>>> origin/master
     <Compile Include="LibraryRulesTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
