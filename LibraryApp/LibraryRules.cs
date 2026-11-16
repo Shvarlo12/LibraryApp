@@ -11,7 +11,7 @@ namespace LibraryApp
         public static string GetFineLevel(int daysOverdue)
         {
             if (daysOverdue <= 0) return "Нет";
-            if (daysOverdue < 14) return "Низкий";
+            if (daysOverdue <= 14) return "Низкий";
             if (daysOverdue <= 30) return "Средний";
             return "Высокий";
         }
