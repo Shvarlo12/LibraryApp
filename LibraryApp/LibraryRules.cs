@@ -8,6 +8,13 @@ namespace LibraryApp
 {
     public class LibraryRules
     {
+        public static bool IsClassic(int year, int currentYear)
+        {
+            if (year > currentYear)
+                throw new ArgumentException("Год не может быть в будущем", nameof(year));
+            return (currentYear - year) >= 100;
+        }
+
         public static string GetFineLevel(int daysOverdue)
         {
             if (daysOverdue <= 0) return "Нет";

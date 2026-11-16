@@ -39,8 +39,28 @@ namespace LibraryApp.Tests
 
         [TestMethod]
         public void GetFineLevel_31Days_ReturnsHigh()
+        public void IsClassic_101Years_ReturnsTrue()
+        {
+            Assert.IsTrue(LibraryRules.IsClassic(1925, 2026));
+        }
+
+        [TestMethod]
+        public void IsClassic_100Years_ReturnsTrue()
+        {
+            Assert.IsTrue(LibraryRules.IsClassic(1926, 2026));
+        }
+
+        [TestMethod]
+        public void IsClassic_99Years_ReturnsFalse()
+        {
+            Assert.IsFalse(LibraryRules.IsClassic(1927, 2026));
+        }
+
+        [TestMethod]
+        public void IsClassic_FutureYear_ThrowsArgumentException()
         {
             Assert.AreEqual("Высокий", LibraryRules.GetFineLevel(31));
+            Assert.ThrowsException<ArgumentException>(() => LibraryRules.IsClassic(2027, 2026));
         }
     }
 }
