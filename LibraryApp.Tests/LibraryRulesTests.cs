@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 using LibraryApp;
+using System;
 
 namespace LibraryApp.Tests
 {
@@ -39,6 +39,11 @@ namespace LibraryApp.Tests
 
         [TestMethod]
         public void GetFineLevel_31Days_ReturnsHigh()
+        {
+            Assert.AreEqual("Высокий", LibraryRules.GetFineLevel(31));
+        }
+
+        [TestMethod]
         public void IsClassic_101Years_ReturnsTrue()
         {
             Assert.IsTrue(LibraryRules.IsClassic(1925, 2026));
@@ -59,7 +64,6 @@ namespace LibraryApp.Tests
         [TestMethod]
         public void IsClassic_FutureYear_ThrowsArgumentException()
         {
-            Assert.AreEqual("Высокий", LibraryRules.GetFineLevel(31));
             Assert.ThrowsException<ArgumentException>(() => LibraryRules.IsClassic(2027, 2026));
         }
     }
